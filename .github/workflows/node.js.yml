@@ -24,6 +24,8 @@ jobs:
       run: npm install
     - run: npm run build --if-present
     - run: npm test
+    - name: remove node modules
+      run: rm -rf node modules
     - name: Upload the artifacts
       uses: actions/upload-artifact@v3
       with: 
